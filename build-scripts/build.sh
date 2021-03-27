@@ -1,4 +1,4 @@
-@echo "Starting Build operations.............................."
+echo "Starting Build operations.............................."
 
 # Loop for 5 seconds and exit
 for i in {1..5}
@@ -6,4 +6,4 @@ for i in {1..5}
         sleep 1s
     done
 
-@echo "Finished Build operations.............................."
+echo "Finished Build operations.............................."

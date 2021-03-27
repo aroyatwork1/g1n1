@@ -1,4 +1,4 @@
-@echo "Starting Publish operations.............................."
+echo "Starting Publish operations.............................."
 
 # Loop for 5 seconds and exit
 for i in {1..5}
@@ -6,4 +6,4 @@ for i in {1..5}
         sleep 1s
     done
 
-@echo "Finished Publish operations.............................."
+echo "Finished Publish operations.............................."
