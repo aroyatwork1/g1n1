@@ -43,13 +43,5 @@ pipeline {
     }
 
   }
-  
-  post {
-    always {
-      script {
-        notifyStash(currentBuild.result)
-      }
-    }
-  }
 
 }
