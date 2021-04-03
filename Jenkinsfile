@@ -31,11 +31,11 @@ pipeline {
     }
 
     stage('Publish') {
-      withCredentials([string(credentialsId: 'slave-1-pass', variable: 'slave_pass')]) {
-        steps {        
-          sh "make publish"
-        }        
-      }      
+      steps {        
+          withCredentials([string(credentialsId: 'slave-1-pass', variable: 'slave_pass')]) {
+            sh "make publish"               
+          }          
+      }           
     }
 
     stage('Done') {
