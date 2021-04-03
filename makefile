@@ -9,3 +9,6 @@ test:
 
 publish:
 	build-scripts/publish.sh
+
+deploy:
+	build-scripts/deploy.sh
