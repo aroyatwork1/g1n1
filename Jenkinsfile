@@ -38,6 +38,14 @@ pipeline {
       }           
     }
 
+    stage('Deploy') {
+      steps {        
+          withCredentials([string(credentialsId: 'slave-1-pass', variable: 'slave_pass')]) {
+            sh "make deploy"               
+          }          
+      }           
+    }
+
     stage('Done') {
       steps {
         echo "Build done...."
