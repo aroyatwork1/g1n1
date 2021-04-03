@@ -1,9 +1,13 @@
+#!/bin/bash
+
+set -e
+
 echo "Starting Publish operations.............................."
 
-WORkSPACE = "/root/gen_node_workspace/workspace/g1n1"
-VERSION = "$(date +%s)"
-ARTIFACT_NAME = "g1n1_archive.${VESRION}.zip"
-DEPLOYMENT_SERVER = "139.59.25.64"
+WORkSPACE="/root/gen_node_workspace/workspace/g1n1"
+VERSION="$(date +%s)"
+ARTIFACT_NAME="g1n1_archive.${VESRION}.zip"
+DEPLOYMENT_SERVER="139.59.25.64"
 
 # Loop for 5 seconds and exit
 for i in {1..5}
