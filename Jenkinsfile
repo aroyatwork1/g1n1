@@ -2,7 +2,7 @@
 
 pipeline {
   
-  agent { label "generic_node_1" }
+  agent { label "generic_node_2" }
 
   stages {
 
