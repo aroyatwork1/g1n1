@@ -1,9 +1,9 @@
 echo "Starting cleaning operations.............................."
 
-# Loop for 5 seconds and exit
-for i in {1..5}
-    do
-        sleep 1s
-    done
+echo "Cleaning up docker password store..."
+rm /root/.docker/config.json
+
+echo "Cleaning stale local docker images..."
+docker images | grep "g1n1" | awk '{print $1 ":" $2}' | xargs docker rmi
 
 echo "Finished cleaning operations.............................."
