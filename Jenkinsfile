@@ -42,7 +42,7 @@ pipeline {
 
     stage('Deploy') {
       steps {        
-          withCredentials([string(credentialsId: 'slave-1-pass', variable: 'slave_pass')]) {
+          withCredentials([string(credentialsId: 'slave-1-pass', variable: 'slave_pass'), string(credentialsId: 'docker_hub_pass', variable: 'docker_hub_pass')]) {
             sh "make deploy"               
           }          
       }           
