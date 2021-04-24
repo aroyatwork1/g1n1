@@ -51,7 +51,7 @@ if [ -x "$(command -v sshpass)" ]; then
     echo "sshpass is installed"
 else
     echo "*** SSHPASS NOT FOUND ***"
-    echo "Trying to install unsshpasszip..."
+    echo "Trying to install sshpass..."
     apt-get -y install sshpass
 fi
 
