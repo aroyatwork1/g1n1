@@ -32,7 +32,7 @@ else
 fi
 
 if [ -x "$(command -v zip)" ]; then
-    echo "make is installed"
+    echo "zip is installed"
 else
     echo "*** ZIP NOT FOUND ***"
     echo "Trying to install zip..."
@@ -40,12 +40,19 @@ else
 fi
 
 if [ -x "$(command -v unzip)" ]; then
-    echo "make is installed"
+    echo "unzip is installed"
 else
     echo "*** UNZIP NOT FOUND ***"
     echo "Trying to install unzip..."
     apt-get -y install unzip
 fi
 
+if [ -x "$(command -v sshpass)" ]; then
+    echo "sshpass is installed"
+else
+    echo "*** SSHPASS NOT FOUND ***"
+    echo "Trying to install unsshpasszip..."
+    apt-get -y install sshpass
+fi
 
 echo "Pre-requisite  checks done................................"
