@@ -1,3 +1,6 @@
+start:
+    build-scripts/start.sh
+
 clean:
 	build-scripts/clean.sh
 

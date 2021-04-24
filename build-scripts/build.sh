@@ -1,9 +1,11 @@
+#!/bin/bash
+
+set -e
+
 echo "Starting Build operations.............................."
-
-# Loop for 5 seconds and exit
-for i in {1..5}
-    do
-        sleep 1s
-    done
-
+VERSION=$(date +%s)
+LATEST_COMMIT_HASH=$(git log -n 1 --pretty=format:"%H")
+BUILD_NAME="${LATEST_COMMIT_HASH}.g1n1.${VERSION}"
+echo "Generating new build named ${BUILD_NAME}..............."
+docker build -t "${BUILD_NAME}" .
 echo "Finished Build operations.............................."
