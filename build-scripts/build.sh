@@ -18,5 +18,5 @@ docker push ${G1N1_IMAGE_NAME}
 rm /root/.docker/config.json
 docker logout
 
-export G1N1_IMAGE_NAME
+echo G1N1_IMAGE_NAME > ~/g1n1_tmp
 echo "Finished Build operations.............................."

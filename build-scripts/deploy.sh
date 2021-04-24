@@ -5,6 +5,7 @@ set -e
 echo "Starting Deploy operations.............................."
 
 DEPLOYMENT_SERVER="139.59.25.64"
+G1N1_IMAGE_NAME=$(cat ~/g1n1_tmp)
 
 echo "Moving inside Artifact directory and copying files..."
 
@@ -25,6 +26,6 @@ service nginx stop
 sleep 1s
 service nginx start
 
-unset G1N1_IMAGE_NAME
+rm ~/g1n1_tmp
 
 echo "Finished Deploy operations.............................."
