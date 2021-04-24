@@ -1,5 +1,5 @@
 start:
-    build-scripts/start.sh
+	build-scripts/start.sh
 
 clean:
 	build-scripts/clean.sh
