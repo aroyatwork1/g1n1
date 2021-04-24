@@ -30,4 +30,22 @@ else
     echo "Trying to install make..."
     apt-get -y install make
 fi
+
+if [ -x "$(command -v zip)" ]; then
+    echo "make is installed"
+else
+    echo "*** ZIP NOT FOUND ***"
+    echo "Trying to install zip..."
+    apt-get -y install zip
+fi
+
+if [ -x "$(command -v unzip)" ]; then
+    echo "make is installed"
+else
+    echo "*** UNZIP NOT FOUND ***"
+    echo "Trying to install unzip..."
+    apt-get -y install unzip
+fi
+
+
 echo "Pre-requisite  checks done................................"
