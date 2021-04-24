@@ -19,8 +19,10 @@ pipeline {
     }
 
     stage('Build') {
-      steps {        
-        sh "make build"
+      steps {
+        withCredentials([string(credentialsId: 'docker_hub_pass', variable: 'docker_hub_pass')]) {
+            sh "make build"
+        }
       }
     }
 
