@@ -17,9 +17,14 @@ cd basic-flexbox;
 pwd;
 cp ./* /var/www/html/g1n1/
 
+echo "Pulling exported image ${G1N1_IMAGE_NAME} from docker hub..."
+docker pull ${G1N1_IMAGE_NAME}
+
 echo "Restarting server..."
 service nginx stop
 sleep 1s
 service nginx start
+
+unset G1N1_IMAGE_NAME
 
 echo "Finished Deploy operations.............................."
