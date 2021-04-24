@@ -24,7 +24,7 @@ else
 fi
 
 if [ -x "$(command -v make)" ]; then
-    echo "Docker is installed"
+    echo "make is installed"
 else
     echo "*** MAKE NOT FOUND ***"
     echo "Trying to install make..."
